@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import data.Database;
+import data.Session;
 import service.UserService;
 import vo.UserVO;
 
@@ -28,6 +29,9 @@ public class UserDao {
 
 	public UserVO selectUser(HashMap < String, String > param) {  //일치하지 않는 유저를 리턴
 		UserVO rtnUser = null;
+//		UserVO deleteuser = Session.LoginUser; 회원탈퇴
+//		deleteuser.get_n_Name();
+		
 		for(int i = 0; i < database.tb_user.size(); i++){
 			UserVO user = database.tb_user.get(i);
 			boolean flag = true;
